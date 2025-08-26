@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMax - Movie Paradise</title>
+    <link rel="stylesheet" href="aseet/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🎬 CineMax</div>
+        <ul class="nav-links">
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#movies" onclick="showSection('movies')">Movies</a></li>
+            <li><a href="#genres" onclick="showSection('genres')">Genres</a></li>
+            <li><a href="#about" onclick="showSection('about')">About</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to CineMax</h1>
+            <p>Discover amazing movies, from blockbusters to hidden gems. Your next favorite movie is just a click away!</p>
+            <div class="search-container">
+                <input type="text" class="search-box" id="searchInput" placeholder="Search for movies..." onkeyup="searchMovies(event)">
+            </div>
+            <button class="cta-button" onclick="showSection('movies')">Explore Movies</button>
+        </div>
+    </section>
+
+    <section id="movies" class="section" style="display: none;">
+        <div class="container">
+            <h2>Featured Movies</h2>
+            <div class="genres">
+                <div class="genre-tag active" onclick="filterMovies('all')">All</div>
+                <div class="genre-tag" onclick="filterMovies('action')">Action</div>
+                <div class="genre-tag" onclick="filterMovies('comedy')">Comedy</div>
+                <div class="genre-tag" onclick="filterMovies('drama')">Drama</div>
+                <div class="genre-tag" onclick="filterMovies('horror')">Horror</div>
+                <div class="genre-tag" onclick="filterMovies('sci-fi')">Sci-Fi</div>
+            </div>
+            <div class="loader" id="loader"></div>
+            <div class="movie-grid" id="movieGrid"></div>
+        </div>
+    </section>
+
+    <section id="genres" class="section" style="display: none;">
+        <div class="container">
+            <h2>Browse by Genre</h2>
+            <p style="text-align: center; font-size: 1.2rem; opacity: 0.8; margin-bottom: 3rem;">
+                Find your perfect movie by exploring different genres
+            </p>
+            <div class="movie-grid">
+                <div class="movie-card" onclick="filterMovies('action')">
+                    <div class="movie-poster">🔥</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Action Movies</div>
+                        <div class="movie-description">High-octane adventures and thrilling sequences</div>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="filterMovies('comedy')">
+                    <div class="movie-poster">😂</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Comedy Movies</div>
+                        <div class="movie-description">Laugh out loud with the best comedies</div>
+                    </div>
+                </div>
+                <div class="movie-card" onclick="filterMovies('drama')">
+                    <div class="movie-poster">🎭</div>
+                    <div class="movie-info">
+                        <div class="movie-title">Drama Movies</div>
+                        <div class="movie-description">Emotional stories that touch the heart</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section" style="display: none;">
+        <div class="container">
+            <h2>About CineMax</h2>
+            <p style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                CineMax is your ultimate destination for movie discovery. We bring you the best collection of movies 
+                from around the world, carefully curated to provide you with the most entertaining experience. 
+                Whether you're looking for the latest blockbusters or timeless classics, we've got you covered.
+            </p>
+        </div>
+    </section>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeModal()">&times;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 CineMax. All rights reserved. Made with ❤️ for movie lovers.</p>
+    </footer>
+
+    <script src="aseet/js/app.js"></script>
+</body>
+</html>
