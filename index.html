@@ -17,16 +17,23 @@
         </ul>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Welcome to CineMax</h1>
-            <p>Discover amazing movies, from blockbusters to hidden gems. Your next favorite movie is just a click away!</p>
-            <div class="search-container">
-                <input type="text" class="search-box" id="searchInput" placeholder="Search for movies..." onkeyup="searchMovies(event)">
+    <section id="home" class="hero" style="background: linear-gradient(135deg, #1a1a2e 60%, #16213e 100%); color: #fff; min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+        <div class="hero-content" style="text-align: center; max-width: 600px; margin: auto;">
+            <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: 2px;">
+                Welcome to <span style="color: #e94560;">CineMax</span>
+            </h1>
+            <p style="font-size: 1.4rem; opacity: 0.9; margin-bottom: 2rem;">
+                Discover amazing movies, from blockbusters to hidden gems.<br>
+                <span style="color: #e94560;">Your next favorite movie is just a click away!</span>
+            </p>
+            <div class="search-container" style="margin-bottom: 2rem;">
+                <input type="text" class="search-box" id="searchInput" placeholder="Search for movies..." onkeyup="searchMovies(event)" style="padding: 0.8rem 1.2rem; border-radius: 30px; border: none; width: 80%; max-width: 350px; font-size: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
             </div>
-            <button class="cta-button" onclick="showSection('movies')">Explore Movies</button>
+            <button class="cta-button" onclick="showSection('movies')" style="background: #e94560; color: #fff; border: none; padding: 1rem 2.5rem; border-radius: 30px; font-size: 1.2rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(233,69,96,0.15); transition: background 0.2s;">
+                🎬 Explore Movies
+            </button>
         </div>
-    </section>
+    </section></div>
 
     <section id="movies" class="section" style="display: none;">
         <div class="container">
